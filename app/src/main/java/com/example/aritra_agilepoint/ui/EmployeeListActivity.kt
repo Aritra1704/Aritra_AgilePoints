@@ -21,7 +21,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.find
 
-class EmployeeListActivity : AppCompatActivity() {
+class EmployeeListActivity : BaseActivity() {
 
     lateinit var rvEmployee: RecyclerView
     lateinit var tvNoData: TextView

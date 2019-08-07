@@ -13,7 +13,7 @@ import com.example.aritra_agilepoint.modules.data.Employee
 import com.example.aritra_agilepoint.viewmodel.EmployeeVM
 import org.jetbrains.anko.find
 
-class EmployeeDetailActivity : AppCompatActivity() {
+class EmployeeDetailActivity : BaseActivity() {
 
     lateinit var ivEmployee: ImageView
     lateinit var tvEmployeeName: TextView

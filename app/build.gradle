@@ -38,13 +38,8 @@ kapt {
 }
 
 dependencies {
-    def ver_Dagger = '2.5'
     def ver_OKHTTP = '3.9.1'
-    def ver_GSON = '2.8.5'
-    def ver_Retrofit = '2.3.0'
     def ver_LiveData = '1.1.1'
-    def ver_RxJava = '2.1.15'
-    def ver_RxAndroid = '2.0.2'
     def ver_anko = '0.10.8'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -57,37 +52,13 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Dagger
-    implementation "com.google.dagger:dagger:$ver_Dagger"
-    annotationProcessor "com.google.dagger:dagger-compiler:$ver_Dagger"
-    kapt "com.google.dagger:dagger-compiler:$ver_Dagger"
-
-    //Rx
-    implementation "io.reactivex.rxjava2:rxjava:$ver_RxJava"
-    implementation "io.reactivex.rxjava2:rxandroid:$ver_RxAndroid"
-
     // LiveData and ViewModel
     implementation "android.arch.lifecycle:extensions:$ver_LiveData"
     annotationProcessor "android.arch.lifecycle:compiler:$ver_LiveData"
 
-    // Room (use 1.1.0-rc1 for latest version)
-    implementation "android.arch.persistence.room:runtime:$ver_LiveData"
-    annotationProcessor "android.arch.persistence.room:compiler:$ver_LiveData"
-    kapt "android.arch.persistence.room:compiler:$ver_LiveData"
-
-    // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:$ver_Retrofit") {
-        exclude module: 'okhttp'
-    }
-    implementation "com.squareup.retrofit2:converter-gson:$ver_Retrofit"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$ver_Retrofit"
-
     // OkHttp
     implementation "com.squareup.okhttp3:logging-interceptor:$ver_OKHTTP"
     implementation "com.squareup.okhttp3:okhttp:$ver_OKHTTP"
-
-    // GSON
-    implementation "com.google.code.gson:gson:$ver_GSON"
 
     // Anko
     implementation "org.jetbrains.anko:anko-sdk15:$ver_anko"
